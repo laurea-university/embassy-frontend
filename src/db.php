@@ -22,6 +22,7 @@ $db_query = array();
 try {
 	$db_query['get_companies'] = $db->prepare('SELECT * FROM `company`');
 	$db_query['get_companies_by_name'] = $db->prepare('SELECT * FROM `company` WHERE `name` LIKE ?');
+	$db_query['get_tags'] = $db->prepare('SELECT `tags` FROM `company`');
 }
 catch (PDOException $e) {
 	die('Unable to prepare request: ' . $e->getMessage());

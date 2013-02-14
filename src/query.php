@@ -47,13 +47,35 @@ function getCompaniesHandler($args) {
 	$q->execute();
 	$companies = $q->fetchAll(PDO::FETCH_OBJ);
 
-	print json_encode($companies);
+	return $companies;
 }
 
+function getTagsHandler($args) {
+	global $db_query;
+
+	$q = $db_query['get_tags'];
+	$q->execute();
+	$alltags = $q->fetchAll(PDO::FETCH_OBJ);
+
+	$tags = array();
+	foreach ($alltags as $e) {
+		$ea = explode(',', $e->tags);
+		foreach ($ea as $k)
+			$tags[] .= $k;
+	}
+
+	return array_values(array_unique($tags));
+}
+
+/* Commands reference */
 $commandHandlers = array(
 	'getCompanies' => array(
 		'handler' => 'getCompaniesHandler',
 		'args' => array('byName')
+	),
+	'getTags' => array(
+		'handler' => 'getTagsHandler',
+		'args' => array()
 	)
 );
 
@@ -83,7 +105,7 @@ foreach ($arguments as $a => $v) {
 }
 
 try {
-	$commandHandlers[$command]['handler']($arguments);
+	print json_encode($commandHandlers[$command]['handler']($arguments));
 }
 catch (PDOException $e) {
 	die(outputError(errorType::INTERNAL, 'Unable to execute query: ' . $e->getMessage()));
