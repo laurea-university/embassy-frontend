@@ -175,18 +175,18 @@
         <!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="./bootstrap-2.3.0/js/jquery.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-transition.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-alert.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-modal.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-dropdown.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-scrollspy.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-tab.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-tooltip.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-popover.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-button.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-collapse.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-carousel.js"></script>
-        <script src="./bootstrap-2.3.0/js/bootstrap-typeahead.js"></script>
+        <script src="../bootstrap-2.3.0/js/jquery.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-transition.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-alert.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-modal.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-dropdown.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-scrollspy.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-tab.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-tooltip.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-popover.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-button.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-collapse.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-carousel.js"></script>
+        <script src="../bootstrap-2.3.0/js/bootstrap-typeahead.js"></script>
 	</body>
 </html>
