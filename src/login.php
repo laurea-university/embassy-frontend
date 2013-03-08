@@ -1,3 +1,9 @@
+<?php 
+include 'db.php';
+if (isset($_SESSION[SESSION_PREFIX.'id']))
+	header("Location: index.html");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -61,10 +67,10 @@
 
     <div class="container">
 
-      <form class="form-signin">
+      <form  method="post" class="form-signin" action="identification.php">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <input type="password" class="input-block-level" placeholder="Password">
+        <input type="text" name="mail" class="input-block-level" placeholder="Email address">
+        <input type="password" name="passwd" class="input-block-level" placeholder="Password">
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>

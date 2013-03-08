@@ -3,14 +3,16 @@
  * db.php for embassy-frontend
  * by lenormf
  */
-
+ 
+session_start();
+define('SESSION_PREFIX', 'DB_EMBASSY_');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'embassy');
 define('DB_USER', 'root');
 define('DB_PASSWD', 'mysql.root');
 
 try {
-	$db = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASSWD);
+	$db = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USER, '');
 }
 catch (PDOException $e) {
 	die('Database error: ' . $e->getMessage());
