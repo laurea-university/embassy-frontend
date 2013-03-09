@@ -107,6 +107,9 @@
         </div>
 		
 		<?php
+			function boolString($bValue = false) {
+				return ($bValue ? 'true' : 'false');
+			}
 		
 			$con=mysqli_connect("localhost","root","","embassy");
 			// Check connection
@@ -119,44 +122,32 @@
 		
 		<div>
 			<form>
-			<table id='myTable' class="table table-striped">
+			<table class="table table-striped">
 				<thead>
 					<tr>
-						<td>Company Name</td>
-						<td>Info</td>
-						<td>Location</td>
-						<td>Staff</td>
-						<td>Website</td>
-						<td>Phone</td>
+						<td>Username</td>
+						<td>Mail</td>
+						<td>Admin</td>
 						<td></td>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-						$result = mysqli_query($con,"SELECT * FROM company");
+						$result = mysqli_query($con,"SELECT * FROM user");
 
 						while($row = mysqli_fetch_array($result))
 						  {
 						  	echo '<tr id="row'.$row['id'].'">';
 							echo "<td>";
-								echo '<input class="input-small" type="text" value="'.$row['name'].'">';
+								echo '<input class="input-small" type="text" value="'.$row['login'].'">';
 							echo "</td>";
 							echo "<td>";
-								echo '<input type="text" value="'.$row['info'].'">';
+								echo '<input type="text" value="'.$row['mail'].'">';
 							echo "</td>";
 							echo "<td>";
-								echo '<input type="text" value="'.$row['location'].'">';
+								echo '<input type="text" value="'.boolString($row['admin']).'">';
 							echo "</td>";
-							echo "<td>";
-								echo '<input type="text" value="'.$row['staff'].'">';
-							echo "</td>";
-							echo "<td>";
-								echo '<input type="text" value="'.$row['website'].'">';
-							echo "</td>";
-							echo "<td>";
-								echo '<input type="text" value="'.$row['phone'].'">';
-							echo "</td>";
-							echo "<td><a class='btn' href='#' onclick='deleteUser(".$row['id'].", \"../ajax/adminGestion.php\", \"delete\");'><i class='icon-remove'></i></a></td>";
+							echo "<td><a class='btn' href='#' onclick='deleteUser(".$row['id'].", \"../ajax/userGestion.php\", \"delete\");'><i class='icon-remove'></i></a></td>";
 							echo "</tr>";
 						  }
 
@@ -164,7 +155,7 @@
 					?>
 				</tbody>
 			</table>
-			<a class='btn' href='#' onclick='addRow();'><i class='icon-plus-sign'></i></a>
+			<a class='btn' href='#'><i class='icon-plus-sign'></i></a>
 			</form>
 			<div class="form-actions">
 				<button type="submit" class="btn btn-primary">Save changes</button>
