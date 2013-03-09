@@ -30,11 +30,12 @@ echo '</pre>';
 			header("Location: login.php?error=caca");
 			exit(0);
 		}
-		
-		foreach ($ret[0] as $key =>$val)
-			$_SESSION[SESSION_PREFIX.$key] = $val;
+		if (isset($_POST['remember']))
+		{
+			foreach ($ret[0] as $key =>$val)
+				$_SESSION[SESSION_PREFIX.$key] = $val;
+		}
 		header("Location: index.html");
-
 	}
 	else 
 		header("Location: login.php?error=caca");		//redirection get avec message d'erreur
