@@ -8,3 +8,4 @@ if (isset($_POST['type'])){
 		$res = $db->query("DELETE FROM company WHERE id = ".$_POST['id']);
 	}
 }
+?>
