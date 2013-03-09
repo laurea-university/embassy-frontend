@@ -122,7 +122,7 @@
 		
 		<div>
 			<form>
-			<table class="table table-striped">
+			<table id='myTable' class="table table-striped">
 				<thead>
 					<tr>
 						<td>Username</td>
@@ -155,7 +155,7 @@
 					?>
 				</tbody>
 			</table>
-			<a class='btn' href='#'><i class='icon-plus-sign'></i></a>
+			<a class='btn' href='#' onclick='adduserRow();'><i class='icon-plus-sign'></i></a>
 			</form>
 			<div class="form-actions">
 				<button type="submit" class="btn btn-primary">Save changes</button>
