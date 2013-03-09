@@ -175,7 +175,10 @@
         <!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
+<<<<<<< HEAD
         <script src="../js/ajaxRequest.js"></script>
+=======
+>>>>>>> 2e8a5b9ddd159a15e97cc0d943b60452caea3c5f
         <script src="../bootstrap-2.3.0/js/jquery.js"></script>
         <script src="../bootstrap-2.3.0/js/bootstrap-transition.js"></script>
         <script src="../bootstrap-2.3.0/js/bootstrap-alert.js"></script>

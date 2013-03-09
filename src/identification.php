@@ -15,8 +15,8 @@ print_r($_POST);
 echo '</pre>';
 	if (isset($_POST['mail'])&& isset($_POST['passwd']))
 	{
-		$login = mysql_real_escape_string($_POST['mail']);
-		$pass = mysql_real_escape_string($_POST['passwd']);
+		$login = htmlentities(mysql_real_escape_string($_POST['mail']));
+		$pass = htmlentities(mysql_real_escape_string($_POST['passwd']));
 		
 		$res = $db->prepare('SELECT id, login, mail FROM user WHERE mail = :mail AND passwd = SHA1(:passwd)');
 		$res->execute(array('mail' => $login,
