@@ -10,21 +10,17 @@
 
 
 include('db.php');
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
+
 	if (isset($_POST['mail'])&& isset($_POST['passwd']))
 	{
 		$login = htmlentities(mysql_real_escape_string($_POST['mail']));
 		$pass = htmlentities(mysql_real_escape_string($_POST['passwd']));
 		
-		$res = $db->prepare('SELECT id, login, mail FROM user WHERE mail = :mail AND passwd = SHA1(:passwd)');
+		$res = $db->prepare('SELECT id, login, mail, admin FROM user WHERE mail = :mail AND passwd = SHA1(:passwd)');
 		$res->execute(array('mail' => $login,
 							'passwd' => $pass));
 		$ret = $res->fetchAll(PDO::FETCH_ASSOC);
-		echo '<pre>';
-		print_r($ret);
-		echo '</pre>';
+		
 		if ($ret == NULL)
 		{
 			header("Location: login.php?error=caca");

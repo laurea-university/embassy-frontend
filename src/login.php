@@ -72,7 +72,7 @@ if (isset($_SESSION[SESSION_PREFIX.'id']))
         <input type="text" name="mail" class="input-block-level" placeholder="Email address">
         <input type="password" name="passwd" class="input-block-level" placeholder="Password">
         <label class="checkbox">
-          <input type="checkbox" name="remember" value="remember-me"> Remember me
+          <input type="checkbox" name="remember" checked="checked" value="remember-me"> Remember me
         </label>
         <button class="btn btn-large btn-primary" type="submit">Sign in</button>
 		<span style="float:right">Not register ? Click <a>here</a></span>
