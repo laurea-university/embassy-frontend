@@ -103,3 +103,8 @@ echo       '<div class="navbar navbar-inverse navbar-fixed-top">
             </div>
         </div>';
 }
+
+function getLinkPage($page)
+{
+    return ("index.php?page=".$page.".php");
+}

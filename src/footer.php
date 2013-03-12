@@ -5,13 +5,13 @@
 
 <div class="myFooter">
             <ul class="menuFooter">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About Us</a></li>
-            <li><a href=visa.php"">Visas</a></li>
-            <li><a href="news.php">News & Events</a></li>
-            <li><a href="citizen.php">US citizens Services</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-            <li><a href="sitemap.php">SiteMap</a></li>
+            <li><a  href="index.php">Home</a></li>
+            <li><a href="<?php echo getLinkPage("about")?>">About Us</a></li>
+            <li><a href="<?php echo getLinkPage("visa")?>" >Visas</a></li>
+            <li><a href="<?php echo getLinkPage("news")?>">News & Events</a></li>
+            <li><a href="<?php echo getLinkPage("citizen")?>">US citizens Services</a></li>
+            <li><a href="<?php echo getLinkPage("contact")?>">Contact Us</a></li>
+            <li><a href="<?php echo getLinkPage("sitemap")?>">SiteMap</a></li>
         </ul>
           <div class="privacy">
                 <br/><br/>

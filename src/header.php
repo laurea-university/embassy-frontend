@@ -12,6 +12,6 @@
     <link href="css/dcmegamenu.css" rel="stylesheet" type="text/css" />
     <link href="css/menu.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="js/jquery-ui.js" />
 
 </head>
