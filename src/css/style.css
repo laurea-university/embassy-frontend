@@ -1,0 +1,197 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color : #FAFAFA;
+}
+
+
+.logoTopBar{
+    margin-top : 4px;
+    float: left;
+    margin-left : 250px;
+}
+
+.titleTopBar{
+    width : 500px;
+    float:left;
+    margin-left:  50px
+}
+
+.socialTopBar{
+    margin-top : 8px;
+}
+
+.marginRight10{
+    margin-right : 10px
+}
+
+
+.loginInTopBar{
+    margin-left:  40px;
+    margin-top : 1px
+}
+
+
+.logoSlovenia{
+    float:left;
+    width: 400px;
+    border-left : 2px solid black;
+    border-top : 2px solid black;
+    border-bottom: 2px solid black;
+    height: 64px
+}
+
+.logoFlag{
+    float:left;
+    width: 595px;
+    border-top : 2px solid black;
+    border-right : 2px solid black ;
+    border-bottom: 2px solid black
+}
+
+.content {
+    width: 1000px;
+    margin: 30px auto;
+}
+
+.banner {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+          height : 38px;
+}
+
+
+.rightSide {
+    list-style-type: none;
+    margin-top : 15px;
+}
+
+.rightSide li img {
+    width:  90px;
+}
+
+.rightSide li {
+    border : 1px solid black;
+    margin : 0 auto;
+    margin-bottom : 10px;
+    text-align: center;
+}
+
+.rightSide li h4{
+    text-align : center;
+    border-bottom : 1px solid black;
+    background-image : linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+    margin :0 ;
+    font-size : 18px;
+    font-weight: bold;
+        margin-bottom : 10px;
+
+}
+
+
+.MainInfos{
+    width : 1000px;
+    margin : 0 auto;
+}
+
+.leftcollumn{
+    width : 650px;
+    float:left;
+    margin-left:  25px;
+    margin-top : 15px;
+}
+
+.rightCollumn{
+    float:right;
+    width : 300px;
+    margin-right : 15px;
+}
+
+.infos {
+    cursor : pointer;
+    text-decoration :none;
+}
+
+
+.moreNews{
+    list-style-type: none;
+}
+
+.moreNews li {
+    margin-bottom : 15px;
+}
+
+.moreNews li h5 {
+   width:  500px;
+   text-align : center;
+   margin-left:  14px;
+}
+
+.moreNews li p {
+   margin-left:  150px;
+}
+.moreNews li img {
+    float : left;
+}
+
+.title {
+    float: left;
+}
+
+
+.socialBlock{
+    width : 450px;
+    margin : 150px auto;
+}
+
+.social{
+    float:left;
+    margin-left : 20px;
+}
+
+.footer{
+    margin : 0px auto;
+    width : 1000px;
+    background-color : white;
+    text-align : center;
+}
+
+
+
+.myFooter{
+    width:  1000px;
+    
+    margin : 5px auto;
+    background-image : linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+}
+
+.privacy {
+    width:  800px;
+    margin : 0 auto;
+    bottom : 4px;
+}
+
+.privacy p{
+    margin-left : 50px;
+    font-size:  8pt;
+}
+
+
+.menuFooter li{
+width:  120px;
+float:left;
+margin-left:  15px;
+list-style:  none;
+cursor : pointer;
+text-decoration : none;
+}
+
+.menuFooter li a:link{
+    text-decoration : none;
+}
