@@ -23,7 +23,7 @@ include('db.php');
 		
 		if ($ret == NULL)
 		{
-			header("Location: login.php?error=caca");
+			header("Location: login.php?error=badAuth");
 			exit(0);
 		}
 		if (isset($_POST['remember']))
@@ -31,8 +31,8 @@ include('db.php');
 			foreach ($ret[0] as $key =>$val)
 				$_SESSION[SESSION_PREFIX.$key] = $val;
 		}
-		header("Location: index.html");
+		header("Location: index.php");
 	}
 	else 
-		header("Location: login.php?error=caca");		//redirection get avec message d'erreur
+		header("Location: login.php?error=badAuth");		//redirection get avec message d'erreur
 ?>

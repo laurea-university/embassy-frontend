@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php 
-    require_once "utils.php";
+	include	'db.php';
+    include "utils.php";
     require_once "header.php";
     ?> <!-- header  , head block -->
     <body>
@@ -20,16 +21,15 @@
             <div class="MainInfos">
                 <?php
                 if (!isset($_GET['page'])) {
-                    ?>
+                ?>
                     <div class="leftcollumn">
-                    <?php require_once "left_side.php" ?> <!-- info left side -->
+						<?php require_once "left_side.php" ?> <!-- info left side -->
                     </div>
-
                     <div class="rightCollumn">
-    <?php require_once "right_side.php" ?> <!-- info right side -->
+						<?php require_once "right_side.php" ?> <!-- info right side -->
                     </div>
-<?php
-} else if (isset($_GET['page']) && $_GET['page'] != "index.php" && file_exists($_GET['page'])){
+				<?php
+				} else if (isset($_GET['page']) && $_GET['page'] != "index.php" && file_exists($_GET['page'])){
     
     require_once($_GET['page']);
 }

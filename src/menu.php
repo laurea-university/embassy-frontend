@@ -8,14 +8,14 @@
                 <li><a href="#">U.S embassy of slovenia</a></li>
             </ul>
         </li>
-                <li><a href="#">Visa</a>
+        <li><a href="#">Visa</a>
             <ul>
                 <li><a href="#">Immigrant Visa</a></li>
                 <li><a href="#">Visa Waiver Program</a></li>
                 <li><a href="#">Diversity visa Lottery</a></li>
             </ul>
         </li>
-                <li><a href="#">News & Events</a>
+        <li><a href="#">News & Events</a>
             <ul>
                 <li style="margin-left : 60px" id="menu-item-1"><a href="#">Important News</a>
                     <ul>
@@ -53,7 +53,7 @@
                 </li>
             </ul>
         </li>
-                <li><a href="#">US citizens Services</a>
+        <li><a href="#">US citizens Services</a>
             <ul>
                 <li><a href="#">Emergencies</a></li>
                 <li><a href="#">Public services</a></li>
@@ -61,11 +61,19 @@
                 <li><a href="#">Birth of a child</a></li>
             </ul>
         </li>
-
-
-
+<?php
+if (isset($_SESSION[SESSION_PREFIX.'id']) && (isset($_SESSION[SESSION_PREFIX.'admin']) && $_SESSION[SESSION_PREFIX.'admin'] == 1))
+	{
+	echo '<li><a href="#">Administration</a>
+			<ul>
+				<li><a href="userAdmin.php">User</a></li>
+				<li><a href="admin.php">Companies</a></li>
+			</ul>
+		</li>';
+	}
+?>
         <li><a href="<?php echo getLinkPage("contact")?>">Contact us</a></li>
-        <li><input id="tags" style="margin-top : 10px;margin-left:  10px"/></li>
+  <!--      <li style="width : 20px"><input id="tags" style="margin-top : 10px;margin-left:  10px"/></li> a déplacer -->
     </ul>
     
 </div>

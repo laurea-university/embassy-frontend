@@ -13,4 +13,4 @@ include('db.php');
 if (isset($_SESSION[SESSION_PREFIX.'id']))
 	unset($_SESSION[SESSION_PREFIX.'id'], $_SESSION[SESSION_PREFIX.'mail'], $_SESSION[SESSION_PREFIX.'admin'], $_SESSION[SESSION_PREFIX.'login']);
 
-header("Location: index.html");
+header("Location: index.php");
