@@ -12,13 +12,13 @@ body {
 }
 
 .titleTopBar{
-    width : 500px;
     float:left;
     margin-left:  50px
 }
 
 .socialTopBar{
     margin-top : 8px;
+    margin-right: 100px;
 }
 
 .marginRight10{
@@ -98,6 +98,7 @@ body {
 .MainInfos{
     width : 1000px;
     margin : 0 auto;
+    background-color : white;
 }
 
 .leftcollumn{
@@ -184,12 +185,13 @@ body {
 
 
 .menuFooter li{
-width:  120px;
+width:  180px;
 float:left;
 margin-left:  15px;
 list-style:  none;
 cursor : pointer;
 text-decoration : none;
+text-align: center;
 }
 
 .menuFooter li a:link{

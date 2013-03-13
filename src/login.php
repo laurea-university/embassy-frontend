@@ -1,10 +1,20 @@
 <?php 
 include 'db.php';
-include 'utils.php';
 if (isset($_SESSION[SESSION_PREFIX.'id']))
-	header("Location: index.php");
-require_once "header.php";
+	header("Location: index.html");
  ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign in </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./bootstrap-2.3.0/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -38,35 +48,54 @@ require_once "header.php";
       }
 
     </style>
+    <link href="./bootstrap-2.3.0/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./bootstrap-2.3.0/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./bootstrap-2.3.0/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./bootstrap-2.3.0/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./bootstrap-2.3.0/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="./bootstrap-2.3.0/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="./bootstrap-2.3.0/ico/favicon.png">
+  </head>
 
   <body>
-        <?php require_once "top_bar.php" ?> <!-- top bar -> fixed -->
 
-        <div class="content">
+    <div class="container">
 
-            <div class="banner">
+      <form  method="post" class="form-signin" action="identification.php">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" name="mail" class="input-block-level" placeholder="Email address">
+        <input type="password" name="passwd" class="input-block-level" placeholder="Password">
+        <label class="checkbox">
+          <input type="checkbox" name="remember" checked="checked" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+		<span style="float:right">Not register ? Click <a>here</a></span>
 
-                <div class="logoSlovenia"><img src="images/slovenia.png" style="padding-top : 5px" /></div>
-                <div class="logoFlag"><img src="images/banner.jpg" /></div>
+      </form>
+    </div> <!-- /container -->
 
-            </div>
-            <?php require_once "menu.php" ?>
-			<BR/>
-			<div class="container">
-			  <form  method="post" class="form-signin" action="identification.php">
-				<h2 class="form-signin-heading">Please sign in</h2>
-				<input type="text" name="mail" class="input-block-level" placeholder="Email address">
-				<input type="password" name="passwd" class="input-block-level" placeholder="Password">
-				<label class="checkbox">
-				  <input type="checkbox" name="remember" checked="checked" value="remember-me"> Remember me
-				</label>
-				<button class="btn btn-large btn-primary" type="submit">Sign in</button>
-				<span style="float:right">Not register ? Click <a>here</a></span>
-			  </form>
-			</div>
-			<BR/><BR/>
-		<?php require_once "footer.php"; /* footer */ ?>
-		</div>
-		<?php require_once "inc_script.php"; ?> <!-- load all script -->
-    </body>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./bootstrap-2.3.0/js/jquery.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-transition.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-alert.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-modal.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-dropdown.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-scrollspy.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-tab.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-tooltip.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-popover.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-button.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-collapse.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-carousel.js"></script>
+    <script src="./bootstrap-2.3.0/js/bootstrap-typeahead.js"></script>
+
+  </body>
 </html>
