@@ -11,6 +11,8 @@ define('DB_NAME', 'embassy');
 define('DB_USER', 'root');
 define('DB_PASSWD', 'mysql.root');
 
+
+
 try {
 	$db = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USER, '');
 }

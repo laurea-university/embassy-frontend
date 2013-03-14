@@ -9,7 +9,6 @@
             </ul>
         </li>
         <li><a href="<?php echo getLinkPage("contact")?>">Contact us</a></li>
-        <li style="float:right;margin-right : 10px"><input id="tags" style="margin-top : 10px;margin-left:  10px"/></li>
     </ul>
     
 </div>

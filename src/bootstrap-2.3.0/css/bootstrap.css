@@ -728,7 +728,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 10px 0;
+  margin: 0px 0;
   font-family: inherit;
   font-weight: bold;
   line-height: 20px;
@@ -1186,7 +1186,7 @@ input[type="file"] {
 }
 
 select {
-  width: 220px;
+  width: 80px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
@@ -3093,8 +3093,6 @@ table th[class*="span"],
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;

@@ -101,60 +101,11 @@ body {
     background-color : white;
 }
 
-.leftcollumn{
-    width : 650px;
-    float:left;
-    margin-left:  25px;
-    margin-top : 15px;
-}
-
-.rightCollumn{
-    float:right;
-    width : 300px;
-    margin-right : 15px;
-}
-
-.infos {
-    cursor : pointer;
-    text-decoration :none;
-}
-
-
-.moreNews{
-    list-style-type: none;
-}
-
-.moreNews li {
-    margin-bottom : 15px;
-}
-
-.moreNews li h5 {
-   width:  500px;
-   text-align : center;
-   margin-left:  14px;
-}
-
-.moreNews li p {
-   margin-left:  150px;
-}
-.moreNews li img {
-    float : left;
-}
-
 .title {
     float: left;
 }
 
 
-.socialBlock{
-    width : 450px;
-    margin : 150px auto;
-}
-
-.social{
-    float:left;
-    margin-left : 20px;
-}
 
 .footer{
     margin : 0px auto;
@@ -196,4 +147,33 @@ text-align: center;
 
 .menuFooter li a:link{
     text-decoration : none;
+}
+
+
+
+contents tr {
+    cursor : pointer;
+    background-color : white;
+}
+
+
+.leftSide {
+    width:  250px;
+    border : 1px solid black;
+    border-radius: 5px;
+    background-image : linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+    float: left;
+    min-height : 420px;
+    margin-top : 10px;
+}
+
+
+.rightSide {
+    min-height : 420px;
+    float : left;
+    margin-left : 50px;
+    width : 650px;
+    border-radius: 5px;
+    background-image : linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+    border : 1px solid black;
 }
