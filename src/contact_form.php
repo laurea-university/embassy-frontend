@@ -1,5 +1,5 @@
-<h1 style="text-align :center">Contact us</h1>
-<form class="well span8" style="width: 930px;margin-left : 20px; padding : 1">
+
+<form class="well span8" style="width:  560px; margin-left : 20px; padding : 1px">
   <div class="row">
 		<div class="span3">
 			<label>First Name</label>
