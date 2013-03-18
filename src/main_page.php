@@ -8,8 +8,8 @@ $category = new Category($con);
 $result = $category->getAllCategory();
 $image_link = new ImageCompany($con);
 
-$company = new Company($con);
-$country = new Country($con);
+$company =  new Company ($con);
+$country = new Country ($con);
 
 $slovenia_company = $company->getCompanyById($country->getIdCountry(SLOVENIA));
 $finnish_company = $company->getCompanyById($country->getIdCountry(FINLAND));
@@ -20,7 +20,7 @@ $finnish_company = $company->getCompanyById($country->getIdCountry(FINLAND));
     <ul style="list-style-type: none;margin-top : 10px ">
         <?php
         while ($row = mysqli_fetch_array($result)) {
-            ?><li><input type="checkbox" oncheck="searchResultByCategory('<?php echo $row["id_category"] ?>')" name="<?php echo $row["name"] ?>" value="<?php echo $row[0] ?>" />
+            ?><li><input type="checkbox" oncheck="searchResultByCategory('<?php echo $row['id_category'] ?>')" name="<?php echo $row["name"] ?>" value="<?php echo $row["id_category"] ?>" />
                 <span style="margin-left:  7px"> <?php echo $row["name"] ?></span></li><?php }
         ?>
     </ul>

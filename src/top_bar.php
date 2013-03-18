@@ -10,20 +10,24 @@
                         <img  alt="Facebook" title="Facebook" src="http://photos.state.gov/libraries/slovakia/328671/social-media/20x20_facebook.jpg" /></a>
 
 
-                    <a title="Slocast" href="http://www.slocast.si/" target="_blank" class="marginRight10">
+                    <a title="Slocast" href="http://www.slocast.si/" target="_blank" class="marginRight5">
 
                         <img  alt="Slocast" title="Slocast" src="http://photos.state.gov/libraries/slovakia/328671/social-media/slocast-20.jpg" >
                     </a>
-                    <a title="Twitter" href="http://twitter.com/USEmbassySLO" target="_blank" class="marginRight10">
+                    <a title="Twitter" href="http://twitter.com/USEmbassySLO" target="_blank" class="marginRight5">
 
                         <img  alt="Twitter" title="Twitter" src="http://photos.state.gov/libraries/slovakia/328671/social-media/20x20_twitter.jpg" >
                     </a>
-                    <a title="YouTube" href="http://www.youtube.com/user/USEmbassyLjubljana" target="_blank" class="marginRight10">
+                    <a title="YouTube" href="http://www.youtube.com/user/USEmbassyLjubljana" target="_blank" class="marginRight5">
 
                         <img alt="YouTube" title="YouTube" src="http://photos.state.gov/libraries/slovakia/328671/social-media/20x20_youtube.jpg" >
                     </a>
-                    <a class="btn loginInTopBar" href="login.php">Sign in</a>
-                </div>
+                    <a class="btn " href="<?php echo getLinkPage("login")?>">Sign in</a>
+					<?php	
+						if (isset($_SESSION[SESSION_PREFIX.'id']))
+							echo '<a class="btn" href='.getLinkPage("logout").'>Log out</a>';
+					?>
+				</div>
             </div>
         </div>
     </div>

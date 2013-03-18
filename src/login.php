@@ -1,7 +1,6 @@
 <?php 
-include 'db.php';
 if (isset($_SESSION[SESSION_PREFIX.'id']))
-	header("Location: index.html");
+	header("Location: index.php");
  ?>
 
 <!DOCTYPE html>

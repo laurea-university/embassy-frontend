@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php 
-    require_once 'db.php';
+    include 'db.php';
     require_once "classes/category.php";
     require_once "classes/country.php";
     require_once "classes/company.php";
