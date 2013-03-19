@@ -27,6 +27,6 @@ function addRow()
 
 function adduserRow()
 {
-	$('#myTable > tbody').append("<tr><td><input name=username"+glb2+" class=input-small type=text></td><td><input name=mail"+glb2+" type=text></td><td><input name=admin"+glb2+" type=text></td><td><a class='btn' onclick='$(this).parent().fadeOut(300, function(){ $(this).parent().remove(); });'><i class='icon-remove'></i></a></td></tr>");
+	$('#myTable > tbody').append("<tr><td><input name=username"+glb2+" class=input-small type=text></td><td><input name=password"+glb+" type=password></td><td><input name=mail"+glb2+" type=text></td><td><a class='btn' onclick='$(this).parent().fadeOut(300, function(){ $(this).parent().remove(); });'><i class='icon-remove'></i></a></td></tr>");
 	glb2 += 1;
 }

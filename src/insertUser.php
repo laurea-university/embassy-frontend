@@ -1,24 +1,17 @@
 <?php
-$con=mysqli_connect("localhost","root","","embassy");
-// Check connection
-if (mysqli_connect_errno())
-  {
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+include 'db.php';
 
-cpt=1
-  
-while (cpt != 15)
+$cpt = 0;
+
+while ($cpt != (count($_POST)) / 3)
 {
-	$sql="INSERT INTO company (name, info, location, staff, website, phone)
-	VALUES
-	('$_POST[name"+cpt+"]','$_POST[info"+cpt+"]','$_POST[location"+cpt+"]','$_POST[staff"+cpt+"]','$_POST[website"+cpt+"]','$_POST[phone"+cpt+"]')";
-	cpt += 1;
-	if (!mysqli_query($con,$sql))
-  {
-	die('Error: ' . mysqli_error());
-  }
+	$username = htmlentities(mysql_real_escape_string($_POST['username'.$cpt]));
+	$passwd = htmlentities(mysql_real_escape_string($_POST['password'.$cpt]));
+	$mail = htmlentities(mysql_real_escape_string($_POST['mail'.$cpt]));
+	$sql='INSERT INTO user (login, passwd, mail) VALUES("'.$username.'",SHA1("'.$passwd.'"),"'.$mail.'")';
+	$res = $db->query($sql);
+	$cpt += 1;
 }
-
-mysqli_close($con);
+$res->closeCursor();
+header("Location: userAdmin.php");
 ?>

@@ -13,7 +13,6 @@ require_once "header.php";
                 <div class="logoSlovenia"><img src="images/slovenia.png" style="padding-top : 5px" /></div>
                 <div class="logoFlag"><img src="images/banner.jpg" /></div>
             </div>
-			
         <?php require_once "menu.php";?>
 			<form>
 			<table id='myTable' class="table table-striped">

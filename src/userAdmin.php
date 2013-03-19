@@ -4,10 +4,6 @@ include 'utils.php';
 hasAccess('');
 require_once "header.php";
 
-	function boolString($bValue = false) {
-		return ($bValue ? 'true' : 'false');
-	}
-		
 ?>
 <body>
 <?php require_once "top_bar.php" ?>
@@ -25,8 +21,8 @@ require_once "header.php";
 				<thead>
 					<tr>
 						<td>Username</td>
+						<td>Password</td>
 						<td>Mail</td>
-						<td>Admin</td>
 						<td></td>
 					</tr>
 				</thead>
@@ -41,10 +37,10 @@ require_once "header.php";
 								echo '<input class="input-small" type="text" value="'.$row['login'].'">';
 							echo "</td>";
 							echo "<td>";
-								echo '<input type="text" value="'.$row['mail'].'">';
+								echo '<input type="password">';
 							echo "</td>";
 							echo "<td>";
-								echo '<input type="text" value="'.boolString($row['admin']).'">';
+								echo '<input type="text" value="'.$row['mail'].'">';
 							echo "</td>";
 							echo "<td><a class='btn' onclick='deleteUser(".$row['id'].", \"./ajax/userGestion.php\", \"delete\");'><i class='icon-remove'></i></a></td>";
 							echo "</tr>";
