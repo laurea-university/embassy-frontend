@@ -25,6 +25,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db_query = array();
 try {
 	$db_query['get_companies'] = $db->prepare('SELECT * FROM `company`');
+	$db_query['get_users'] = $db->prepare('SELECT * FROM `user`');
 	$db_query['get_companies_by_name'] = $db->prepare('SELECT * FROM `company` WHERE `name` LIKE ?');
 	$db_query['get_tags'] = $db->prepare('SELECT `tags` FROM `company`');
 }

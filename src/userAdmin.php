@@ -8,11 +8,6 @@ require_once "header.php";
 		return ($bValue ? 'true' : 'false');
 	}
 		
-	$con=mysqli_connect("localhost","root","","embassy");					//TODO
-			// Check connection
-	if (mysqli_connect_errno())
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();		//TODO
-			
 ?>
 <body>
 <?php require_once "top_bar.php" ?>
@@ -25,7 +20,7 @@ require_once "header.php";
 			
         <?php require_once "menu.php"; ?>
 		<div>
-			<form>
+			<form action='insertUser.php' method='post'>
 			<table id='myTable' class="table table-striped">
 				<thead>
 					<tr>
@@ -37,8 +32,9 @@ require_once "header.php";
 				</thead>
 				<tbody>
 					<?php
-						$result = mysqli_query($con,"SELECT * FROM user");		//TODO
-						while($row = mysqli_fetch_array($result))				//TODO
+						$sql = 'SELECT * FROM `user`';
+						$res = $db->query($sql);
+						while($row = $res->fetch())
 						  {
 						  	echo '<tr id="row'.$row['id'].'">';
 							echo "<td>";
@@ -50,19 +46,19 @@ require_once "header.php";
 							echo "<td>";
 								echo '<input type="text" value="'.boolString($row['admin']).'">';
 							echo "</td>";
-							echo "<td><a class='btn' href='#' onclick='deleteUser(".$row['id'].", \"./ajax/userGestion.php\", \"delete\");'><i class='icon-remove'></i></a></td>";
+							echo "<td><a class='btn' onclick='deleteUser(".$row['id'].", \"./ajax/userGestion.php\", \"delete\");'><i class='icon-remove'></i></a></td>";
 							echo "</tr>";
 						  }
-						mysqli_close($con);									//TODO
+						$res->closeCursor(); 
 					?>
 				</tbody>
 			</table>
-			<a class='btn' href='#' onclick='adduserRow();'><i class='icon-plus-sign'></i></a>
-			</form>
+			<a class='btn' onclick='adduserRow();'><i class='icon-plus-sign'></i></a>
 			<div class="form-actions">
 				<button type="submit" class="btn btn-primary">Save changes</button>
-				<button type="button" class="btn">Cancel</button>
+				<a href="index.php"><button type="button" class="btn">Cancel</button></a>
 			</div>
+			</form>
 		</div>
 <?php require_once "footer.php"; /* footer */ ?>
         </div>

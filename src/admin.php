@@ -14,15 +14,7 @@ require_once "header.php";
                 <div class="logoFlag"><img src="images/banner.jpg" /></div>
             </div>
 			
-        <?php require_once "menu.php";
-
-		$con=mysqli_connect("localhost","root","","embassy");
-		// Check connection a changer pour PDO 						// TODO
-		if (mysqli_connect_errno())
-		 echo "Failed to connect to MySQL: " . mysqli_connect_error();	
-			?>
-		
-		<div>
+        <?php require_once "menu.php";?>
 			<form>
 			<table id='myTable' class="table table-striped">
 				<thead>
@@ -38,15 +30,16 @@ require_once "header.php";
 				</thead>
 				<tbody>
 					<?php
-						$result = mysqli_query($con,"SELECT * FROM company");		// TODO
-						while($row = mysqli_fetch_array($result))					// TODO
+						$sql = 'SELECT * FROM `company`';
+						$res = $db->query($sql);
+						while($row = $res->fetch())
 						  {
 						  	echo '<tr id="row'.$row['id'].'">';
 							echo "<td>";
 								echo '<input class="input-small" type="text" value="'.$row['name'].'">';
 							echo "</td>";
 							echo "<td>";
-								echo '<input type="text" value="'.$row['info'].'">';
+								echo '<textarea type="text">'.$row['info'].'</textarea>';
 							echo "</td>";
 							echo "<td>";
 								echo '<input type="text" value="'.$row['location'].'">';
@@ -60,20 +53,19 @@ require_once "header.php";
 							echo "<td>";
 								echo '<input type="text" value="'.$row['phone'].'">';
 							echo "</td>";
-							echo "<td><a class='btn' href='#' onclick='deleteUser(".$row['id'].", \"./ajax/adminGestion.php\", \"delete\");'><i class='icon-remove'></i></a></td>";
+							echo "<td><a class='btn' onclick='deleteUser(".$row['id'].", \"./ajax/adminGestion.php\", \"delete\");'><i class='icon-remove'></i></a></td>";
 							echo "</tr>";
 						  }
-						mysqli_close($con);											// TODO
+						$res->closeCursor();
 					?>
 				</tbody>
 			</table>
-			<a class='btn' href='#' onclick='addRow();'><i class='icon-plus-sign'></i></a>
-			</form>
+			<a class='btn' onclick='addRow();'><i class='icon-plus-sign'></i></a>
 			<div class="form-actions">
 				<button type="submit" class="btn btn-primary">Save changes</button>
-				<button type="button" class="btn">Cancel</button>
+				<a href="index.php"><button type="button" class="btn">Cancel</button></a>
 			</div>
-		</div>
+			</form>
 <?php require_once "footer.php"; /* footer */ ?>
         </div>
 		<script src="./js/ajaxRequest.js"></script>
