@@ -1,6 +1,6 @@
 <?php
 
-require_once "popup_infos.php";
+
 
 $con = connexion();
 
@@ -28,14 +28,7 @@ $finnish_company = $company->getCompanyById($country->getIdCountry(FINLAND));
 </div>
 
 <div class="rightSide">
-    <style type="text/css" title="currentStyle">
-        @import "media/css/demo_page.css";
-        @import "media/css/demo_table_jui.css";
-    </style>
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-
-
 
     <div class="demo_jui">
         <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
@@ -51,51 +44,30 @@ $finnish_company = $company->getCompanyById($country->getIdCountry(FINLAND));
                     ?><tr>
                 <script>
                                       
-                    $(function() {
-    $( "<?php echo '#dialfi_'.$row_finland['id'] ?>" ).dialog({
-       width: 700,
-      autoOpen: false,
-      show: {
-        effect: "blind",
-        duration: 700
-      },
-      hide: {
-        effect: "explode",
-        duration: 700
-      }
-    });
-
-                    $("<?php echo "#dialslo_" . $row_slovenia['id'] ?>" ).dialog({
-                        width : 700, 
-                        autoOpen: false,
-                        show: {
-                            effect: "blind",
-                            duration: 1000
-                        },
-                        hide: {
-                            effect: "explode",
-                            duration: 1000
-                        }
-                    });
-
-
-    $("<?php echo '#fi_'.$row_finland['id'] ?>" ).click(function() {
-      $("<?php echo '#dialfi_'.$row_finland['id'] ?>" ).dialog( "open" );
-    });
-   
-   
-   
-                    $("<?php echo "#slo_" . $row_slovenia['id'] ?>").click(function() {
-                        $( "<?php echo "#dialslo_" . $row_slovenia['id'] ?>" ).dialog( "open" );
-                    });
-   
-   
-$("<?php echo "#tabfi_" . $row_finland['id'] ?>").tabs();    
-$("<?php echo "#tabslo_" . $row_slovenia['id'] ?>").tabs();    
-
-                     
-
-  });
+    $(function() {
+            $( "<?php echo '#dialfi_' . $row_finland['id'] ?>" ).dialog({
+                width: 700,
+                autoOpen: false
+            });
+            
+            $("<?php echo "#dialslo_" . $row_slovenia['id'] ?>" ).dialog({
+                width : 700, 
+                autoOpen: false
+            });
+            
+            
+            $("<?php echo '#fi_' . $row_finland['id'] ?>" ).click(function() {
+                $("<?php echo '#dialfi_' . $row_finland['id'] ?>" ).dialog( "open" );
+            });
+            
+            $("<?php echo "#slo_" . $row_slovenia['id'] ?>").click(function() {
+                $( "<?php echo "#dialslo_" . $row_slovenia['id'] ?>" ).dialog( "open" );
+            });
+            
+            
+            $("<?php echo "#tabfi_" . $row_finland['id'] ?>").tabs();    
+            $("<?php echo "#tabslo_" . $row_slovenia['id'] ?>").tabs();    
+        });
 
             
                 </script>            
@@ -113,7 +85,6 @@ affInfoCompany($row_slovenia, $image_link, "slo_");
 
                 </tr>
 <?php
-
 }
 ?>
             </tbody>

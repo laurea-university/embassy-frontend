@@ -17,15 +17,70 @@ function affInfoCompany($elem, $image_link, $word)
     <p><?php echo $elem['info']?></p>
   </div>
   <div id="tabs-2<?php echo $word.$elem['id'] ?>">
-    <img src="<?php echo $image_link->getImageByIdCompany($elem['id'])  ?>"/>
+      <?php
+      $images = $image_link->getImageByIdCompany($elem['id']);
+      if ($images)
+          display_pic($elem['id'], $images);
+    ?>
   </div>
   <div id="tabs-3<?php echo $word.$elem['id'] ?>">
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448" style="color:#0000FF;text-align:left">Size up</a></small>
+    <!--<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448" style="color:#0000FF;text-align:left">Size up</a></small>-->
   </div>
     <div id="tabs-4<?php echo $word.$elem['id'] ?>">
     <?php include "contact_form.php" ?>
   </div>
 </div></div>
 
+<?php
+}
+
+
+function display_pic($id, $images)
+{
+  ?>
+<div id="musiciansCarousel_<?php echo $id ?>" class="carousel slide">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+          <?php 
+          $i = 0;
+          while ($image = mysqli_fetch_array($images))
+          {
+              if ($i ==0)
+              {
+                  ?>
+                    <div class="active item">
+          	<a href="#"><img src="<?php echo $image["addr_image"] ?>" class="centerPic" /></a>
+          </div>
+          <?php
+              }
+              else
+              {
+               ?>
+                    <div class="item">
+          	<a href="#"><img src="<?php echo $image["addr_image"] ?>" class="centerPic" /></a>
+          </div>
+          <?php
+          
+              }
+              $i++;
+          }
+?>              
+      </div>
+  
+    <!-- Carousel nav -->
+      <a class="carousel-control left" href="#musiciansCarousel_<?php echo $id ?>" data-slide="prev"> < </a>
+      <a class="carousel-control right" href="#musiciansCarousel_<?php echo $id ?>" data-slide="next"> > </a>
+    </div>
+      
+    <script type="text/javascript">
+	
+		$(document).ready(function(){
+			$('#musiciansCarousel_<?php echo $id ?>').carousel({
+			interval: 2000
+			});			
+			
+		});
+
+	</script>
 <?php
 }

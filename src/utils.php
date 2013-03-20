@@ -38,3 +38,15 @@ function connexion() {
 function deconexion($con) {
     mysqli_close($con);
 }
+
+
+function autoLoadClasses()
+{
+    $dir_load = "classes";
+   $dir = new DirectoryIterator($dir_load);
+foreach ($dir as $fileinfo) {
+    if (!$fileinfo->isDot()) {
+        include ($dir_load."/".$fileinfo->getFilename());
+    }
+} 
+}

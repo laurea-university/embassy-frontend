@@ -177,3 +177,9 @@ contents tr {
     background-image : linear-gradient(to bottom, #FFFFFF, #F2F2F2);
     border : 1px solid black;
 }
+
+
+.centerPic{
+    width : 400px;
+    margin : 0 auto
+}
