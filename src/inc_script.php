@@ -26,5 +26,10 @@
             "jQueryUI": true,
             "paginationType": "full_numbers"
         });
+        
+                oTable2 = $('#example2').dataTable({
+            "jQueryUI": true,
+            "paginationType": "full_numbers"
+        });
     } );
 </script>

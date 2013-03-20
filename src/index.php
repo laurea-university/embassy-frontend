@@ -5,7 +5,7 @@
     require_once "utils.php";
     require_once "header.php";
     include "popup_infos.php";
-    autoLoadClasses();    
+    autoload();    
     ?> <!-- header  , head block -->
     <body>
 

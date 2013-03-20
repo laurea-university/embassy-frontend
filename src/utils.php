@@ -50,3 +50,21 @@ foreach ($dir as $fileinfo) {
     }
 } 
 }
+
+function autoLoadCSSFile()
+{
+    $dir_load = "css";
+   $dir = new DirectoryIterator($dir_load);
+foreach ($dir as $fileinfo) {
+    if (!$fileinfo->isDot()) {
+        ?><link href="<?php echo $dir_load."/".$fileinfo->getFilename() ?>" rel="stylesheet"> <?php
+    }
+} 
+}
+
+
+function autoload()
+{
+ autoLoadClasses();  
+ autoLoadCSSFile();
+}

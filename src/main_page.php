@@ -30,64 +30,12 @@ $finnish_company = $company->getCompanyById($country->getIdCountry(FINLAND));
 <div class="rightSide">
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 
-    <div class="demo_jui">
-        <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
-            <thead>
-                <tr>
-                    <th>Finnish company</th>
-                    <th>Slovenian company</th>
-                </tr>
-            </thead>
-            <tbody class="contents">
-                <?php
-                while (($row_slovenia = mysqli_fetch_array($slovenia_company)) && ($row_finland = mysqli_fetch_array($finnish_company))) {
-                    ?><tr>
-                <script>
-                                      
-    $(function() {
-            $( "<?php echo '#dialfi_' . $row_finland['id'] ?>" ).dialog({
-                width: 700,
-                autoOpen: false
-            });
-            
-            $("<?php echo "#dialslo_" . $row_slovenia['id'] ?>" ).dialog({
-                width : 700, 
-                autoOpen: false
-            });
-            
-            
-            $("<?php echo '#fi_' . $row_finland['id'] ?>" ).click(function() {
-                $("<?php echo '#dialfi_' . $row_finland['id'] ?>" ).dialog( "open" );
-            });
-            
-            $("<?php echo "#slo_" . $row_slovenia['id'] ?>").click(function() {
-                $( "<?php echo "#dialslo_" . $row_slovenia['id'] ?>" ).dialog( "open" );
-            });
-            
-            
-            $("<?php echo "#tabfi_" . $row_finland['id'] ?>").tabs();    
-            $("<?php echo "#tabslo_" . $row_slovenia['id'] ?>").tabs();    
-        });
-
-            
-                </script>            
-    <?php 
-affInfoCompany($row_finland, $image_link, "fi_");    
-affInfoCompany($row_slovenia, $image_link, "slo_");    
-    
-    if ($row_finland != null) {
-        ?><td id="fi_<?php echo $row_finland['id'] ?>"><?php echo $row_finland['name']; ?> </td> <?php }
-    ?>
-                <?php if ($row_slovenia != null) {
-                    ?><td id="slo_<?php echo $row_slovenia['id'] ?>"><?php echo $row_slovenia['name']; ?></td> <?php }
-                ?> 
-
-
-                </tr>
+    <div class="demo_jui" >
 <?php
-}
+displayTable("fi_","example", "Finnish company", $finnish_company, $image_link);
+displayTable("slo_","example2", "Slovenian company", $slovenia_company, $image_link);
 ?>
-            </tbody>
-        </table>
+        
+
     </div>
 </div>
