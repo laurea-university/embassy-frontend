@@ -113,6 +113,7 @@ table.display thead th div.DataTables_sort_wrapper span {
         margin-left : 5px;
         margin-right : 5px;
         float: left;
+        margin-top : 5px;
 }
 
 .dataTables_processing {

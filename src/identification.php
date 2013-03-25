@@ -17,8 +17,7 @@ include('db.php');
 		$pass = htmlentities(mysql_real_escape_string($_POST['passwd']));
 		
 		$res = $db->prepare('SELECT id, login, mail, admin FROM user WHERE mail = :mail AND passwd = SHA1(:passwd)');
-		$res->execute(array('mail' => $login,
-							'passwd' => $pass));
+		$res->execute(array('mail' => $login, 'passwd' => $pass));
 		$ret = $res->fetchAll(PDO::FETCH_ASSOC);
 		
 		if ($ret == NULL)
