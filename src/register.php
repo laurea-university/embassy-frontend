@@ -20,7 +20,7 @@ if($_POST["regUsrname"] && $_POST["regEmail"] && $_POST["regPwd"] && $_POST["reg
 			print "<h1>you have registered sucessfully, a mail will be send into your mailbox.</h1>";
 			//mail($mail, "Welcome to DbEmbassy", "Hi dear $user,\n Welcome to our website, and feel free to visit us regularly to see our new companies which have registred.\n Your password is $passwd");
 			//print "<a href='index.php'>go to the login page</a>";
-			print "vous aller etre rediriger vers la page de login";
+			print "You will be redirected to the index page in few seconds.";
 			header("Refresh: 5;URL=index.php");
 			}
 		else
