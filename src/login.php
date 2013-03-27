@@ -74,7 +74,7 @@ if (isset($_SESSION[SESSION_PREFIX.'id']))
           <input type="checkbox" name="remember" checked="checked" value="remember-me"> Remember me
         </label>
         <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-		<span style="float:right">Not register ? Click <a>here</a></span>
+		<span style="float:right">Not register ? Click <a href="registration.php">here</a></span>
 
       </form>
     </div> <!-- /container -->
