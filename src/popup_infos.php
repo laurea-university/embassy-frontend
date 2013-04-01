@@ -134,3 +134,4 @@ function affInfoCompany($elem, $image_link, $word) {
     </script>
     <?php
 }
+
