@@ -8,7 +8,7 @@
     autoload();    
     ?> <!-- header  , head block -->
     <body>
-
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
         <?php require_once "top_bar.php" ?> <!-- top bar -> fixed -->
 
         <div class="content">
@@ -43,7 +43,6 @@ else if (isset($_GET['page']) && $_GET['page'] != "index.php" && file_exists($_G
 include "footer.php"; /* footer */
 ?>
         </div>
-
 <?php
 include "inc_script.php";
 ?>

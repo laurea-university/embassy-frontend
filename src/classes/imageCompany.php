@@ -11,6 +11,7 @@ class ImageCompany {
 
     public function getImageByIdCompany($id) {
         $result = mysqli_query($this->con, "SELECT * FROM " . $this->table . " where id_company = " . $id);
+        
         return ($result);
         }
 }

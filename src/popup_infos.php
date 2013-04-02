@@ -1,12 +1,15 @@
 <?php
 
-function displayTable($word, $id_table, $title, $company, $image_link) {
+function displayTable($word, $id_table, $company, $image_link, $category, $country) {
+    
     ?>
 
     <table cellpadding="0" cellspacing="0" border="0" class="display" id="<?php echo $id_table ?>">
         <thead>
             <tr>
-                <th><?php echo $title ?></th>
+                <th>Company</th>
+                <th>Activity sector</th>
+                <th>Nationality</th>
             </tr>
         </thead>
         <tbody class="contents">
@@ -35,7 +38,10 @@ function displayTable($word, $id_table, $title, $company, $image_link) {
         affInfoCompany($row, $image_link, $word);
         ?>
             <?php if ($row != null) {
-                ?><td id="<?php echo $word . $row['id'] ?>"><?php echo $row['name']; ?></td> <?php }
+                ?><td id="<?php echo $word . $row['id'] ?>"><?php echo $row['name']; ?></td>
+                <td><?php echo ($category->getSectorActivity($row['id'])) ?></td>
+                <td><?php echo $country->getNationality($row['location']) ?></td>
+ <?php }
             ?> 
         </tr>
             <?php

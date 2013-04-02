@@ -109,7 +109,7 @@ table.display thead th div.DataTables_sort_wrapper span {
 
 .dataTables_wrapper {
 	position: relative;
-        width:  310px;
+        width:  99%;
         margin-left : 5px;
         margin-right : 5px;
         float: left;

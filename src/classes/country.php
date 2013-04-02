@@ -1,8 +1,5 @@
 <?php
 
-define('SLOVENIA', 'slovenia');
-define('FINLAND', 'finland');
-
 class Country {
 
     private $table = "country";
@@ -18,9 +15,17 @@ class Country {
     }
 
     public function getIdCountry($country) {
-        $result = mysqli_query($this->con, "SELECT id_country FROM " . $this->table . " where valid = 1 AND country = '" . $country."'");
+        $result = mysqli_query($this->con, "SELECT id_country FROM " . $this->table . " where valid = 1 AND country = '" . $country . "'");
         $res = mysqli_fetch_row($result);
         return ($res[0]);
+    }
+
+    public function getNationality($id_country) {
+        $sql = "SELECT * FROM " . $this->table . " where id_country = " . $id_country;
+        $result = mysqli_query($this->con, $sql);
+        $res = mysqli_fetch_row($result);
+
+        return ($res[1]);
     }
 
 }
