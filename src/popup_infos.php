@@ -8,7 +8,7 @@ function displayTable($word, $id_table, $company, $image_link, $category, $count
         <thead>
             <tr>
                 <th>Company</th>
-                <th>Activity sector</th>
+                <th>Sector activity</th>
                 <th>Nationality</th>
             </tr>
         </thead>
@@ -87,7 +87,7 @@ function affInfoCompany($elem, $image_link, $word) {
                 </div>
                 <?php } ?>
             <div id="tabs-3<?php echo $word . $elem['id'] ?>">
-              <!--<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448" style="color:#0000FF;text-align:left">Size up</a></small>-->
+             <!-- <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=laurea+university+of+applied+science+leppavaara&amp;aq=&amp;sll=60.240212,24.924832&amp;sspn=0.139228,0.445976&amp;t=h&amp;ie=UTF8&amp;hq=laurea+university+of+applied+science&amp;hnear=Lepp%C3%A4vaara,+Finlande&amp;ll=60.240212,24.924832&amp;spn=0.130656,0.286448" style="color:#0000FF;text-align:left">Size up</a></small>-->
             </div>
             <div id="tabs-4<?php echo $word . $elem['id'] ?>">
             <?php include "contact_form.php" ?>

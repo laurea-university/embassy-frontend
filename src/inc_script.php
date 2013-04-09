@@ -26,9 +26,8 @@
         
     } );
     
-        function searchResultByCategory(id)
+    function searchResultByCategory(id, stayChecked)
     {
-       
         if (document.getElementById(id).checked == true)
         {
             $("#search").focus();
@@ -43,5 +42,16 @@
             $("#search").trigger("keyup");
         }
 
+        with(document.myform)
+        {
+            for(i = 0; i < elements.length; i++)
+            {
+                if(elements[i].checked == true && elements[i].name != stayChecked.name)
+                {
+                    elements[i].checked = false;
+                }
+            }
+
+        }
     }
 </script>
