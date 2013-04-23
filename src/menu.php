@@ -1,4 +1,3 @@
-
 <div class="dcjq-mega-menu">
     <ul id="mega-menu-tut" class="menu">
         <li><a href="index.php">Home</a></li>
@@ -22,5 +21,4 @@ if (isset($_SESSION[SESSION_PREFIX.'id']) && (isset($_SESSION[SESSION_PREFIX.'ad
         <li><a href="<?php echo getLinkPage("contact")?>">Contact us</a></li>
     </ul>
     
-</div>
 </div>

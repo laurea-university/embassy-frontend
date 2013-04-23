@@ -4,6 +4,12 @@ body {
     background-color : #FAFAFA;
 }
 
+.adminBloc{
+    width:  1000px;
+    
+    margin : 5px auto;
+    background-image : linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+}
 
 .logoTopBar{
     margin-top : 4px;
