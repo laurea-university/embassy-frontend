@@ -1,12 +1,6 @@
 <div class="dcjq-mega-menu">
     <ul id="mega-menu-tut" class="menu">
         <li><a href="index.php">Home</a></li>
-        <li><a href="<?php echo getLinkPage("about")?>">About Us</a>
-            <ul>
-                <li><a href="#">Ambassador</a></li>
-                <li><a href="#">U.S embassy of slovenia</a></li>
-            </ul>
-        </li>
         <?php
 if (isset($_SESSION[SESSION_PREFIX.'id']) && (isset($_SESSION[SESSION_PREFIX.'admin']) && $_SESSION[SESSION_PREFIX.'admin'] == 1))
 	{

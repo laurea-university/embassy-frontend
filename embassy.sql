@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Client: 127.0.0.1
--- Généré le: Lun 25 Mars 2013 à 17:18
--- Version du serveur: 5.5.27-log
--- Version de PHP: 5.4.6
+-- Host: localhost
+-- Generation Time: May 12, 2013 at 09:07 AM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.4.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `embassy`
+-- Database: `embassy`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE IF NOT EXISTS `category` (
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
--- Contenu de la table `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`id_category`, `name`, `valid`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `category` (`id_category`, `name`, `valid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `company`
+-- Table structure for table `company`
 --
 
 CREATE TABLE IF NOT EXISTS `company` (
@@ -63,10 +63,10 @@ CREATE TABLE IF NOT EXISTS `company` (
   `valid` int(11) NOT NULL DEFAULT '1',
   `mail` varchar(512) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
 --
--- Contenu de la table `company`
+-- Dumping data for table `company`
 --
 
 INSERT INTO `company` (`id`, `name`, `title`, `info`, `location`, `contact`, `website`, `phone`, `valid`, `mail`) VALUES
@@ -104,7 +104,7 @@ INSERT INTO `company` (`id`, `name`, `title`, `info`, `location`, `contact`, `we
 -- --------------------------------------------------------
 
 --
--- Structure de la table `company_addr`
+-- Table structure for table `company_addr`
 --
 
 CREATE TABLE IF NOT EXISTS `company_addr` (
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `company_addr` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `company_addr`
+-- Dumping data for table `company_addr`
 --
 
 INSERT INTO `company_addr` (`id_company`, `address`, `postal_code`, `country`, `valid`) VALUES
@@ -144,7 +144,7 @@ INSERT INTO `company_addr` (`id_company`, `address`, `postal_code`, `country`, `
 -- --------------------------------------------------------
 
 --
--- Structure de la table `country`
+-- Table structure for table `country`
 --
 
 CREATE TABLE IF NOT EXISTS `country` (
@@ -155,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `country` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `country`
+-- Dumping data for table `country`
 --
 
 INSERT INTO `country` (`id_country`, `country`, `valid`) VALUES
@@ -165,17 +165,18 @@ INSERT INTO `country` (`id_country`, `country`, `valid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `images_company`
+-- Table structure for table `images_company`
 --
 
 CREATE TABLE IF NOT EXISTS `images_company` (
   `id_company` int(11) NOT NULL,
   `addr_image` varchar(512) NOT NULL,
-  `id_image` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_image` int(11) NOT NULL AUTO_INCREMENT,
+  KEY `id_image` (`id_image`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
--- Contenu de la table `images_company`
+-- Dumping data for table `images_company`
 --
 
 INSERT INTO `images_company` (`id_company`, `addr_image`, `id_image`) VALUES
@@ -191,7 +192,7 @@ INSERT INTO `images_company` (`id_company`, `addr_image`, `id_image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `link_cat_comp`
+-- Table structure for table `link_cat_comp`
 --
 
 CREATE TABLE IF NOT EXISTS `link_cat_comp` (
@@ -200,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `link_cat_comp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `link_cat_comp`
+-- Dumping data for table `link_cat_comp`
 --
 
 INSERT INTO `link_cat_comp` (`id_category`, `id_company`) VALUES
@@ -227,7 +228,7 @@ INSERT INTO `link_cat_comp` (`id_category`, `id_company`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
@@ -240,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `login`, `passwd`, `mail`, `admin`) VALUES
