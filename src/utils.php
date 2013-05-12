@@ -68,3 +68,31 @@ function autoload()
  autoLoadClasses();  
  autoLoadCSSFile();
 }
+
+function verifCompany($company, $db)
+{
+	$verif_user = $db->prepare("SELECT id FROM company WHERE name = :name");
+	$verif_user->execute(array(':name'=>$company));
+	$ret = $verif_user->fetchAll(PDO::FETCH_ASSOC);
+	if ($ret != NULL)
+		return FALSE;
+	return TRUE;
+}
+
+function verifyLogin($login, $db){
+	$verif_user = $db->prepare("SELECT id FROM user WHERE login = :login");
+	$verif_user->execute(array('login'=>$login));
+	$ret = $verif_user->fetchAll(PDO::FETCH_ASSOC);
+	if ($ret != NULL)
+		return FALSE;
+	return TRUE;
+}
+
+function verifyMail($mail, $db){
+	$verif_Mail = $db->prepare("SELECT id FROM user WHERE mail = :mail");
+	$verif_Mail->execute(array('mail'=>$mail));
+	$ret = $verif_Mail->fetchAll(PDO::FETCH_ASSOC);
+	if ($ret != NULL)
+		return FALSE;
+	return TRUE;
+}

@@ -4,12 +4,7 @@
 **
 **	Identification script
 **
-**	Check if the session is on, if not check if recived information for identification then proceed.
-**
 */
-
-
-include('db.php');
 
 	if (isset($_POST['mail'])&& isset($_POST['passwd']))
 	{
@@ -19,10 +14,10 @@ include('db.php');
 		$res = $db->prepare('SELECT id, login, mail, admin FROM user WHERE mail = :mail AND passwd = SHA1(:passwd)');
 		$res->execute(array('mail' => $login, 'passwd' => $pass));
 		$ret = $res->fetchAll(PDO::FETCH_ASSOC);
-		
+
 		if ($ret == NULL)
 		{
-			header("Location: login.php?error=caca");
+			header("Location: index.php?page=login.php&error=error");
 			exit(0);
 		}
 		if (isset($_POST['remember']))
@@ -33,5 +28,5 @@ include('db.php');
 		header("Location: index.php");
 	}
 	else 
-		header("Location: login.php?error=caca");		//redirection get avec message d'erreur
+		header("Location: index.php?page=login.php&error=error");
 ?>

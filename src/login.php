@@ -63,10 +63,13 @@ if (isset($_SESSION[SESSION_PREFIX.'id']))
   </head>
 
   <body>
-
+	<br/>
     <div class="container">
-
-      <form  method="post" class="form-signin" action="identification.php">
+<?php 
+if (isset($_GET['error']))
+	echo '<h3 class="text-error text-center">Authentication fail ! Please try again : </h3><br/>';
+?>
+      <form  method="post" class="form-signin" action="index.php?page=identification.php">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" name="mail" class="input-block-level" placeholder="Email address">
         <input type="password" name="passwd" class="input-block-level" placeholder="Password">
@@ -74,7 +77,7 @@ if (isset($_SESSION[SESSION_PREFIX.'id']))
           <input type="checkbox" name="remember" checked="checked" value="remember-me"> Remember me
         </label>
         <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-		<span style="float:right">Not register ? Click <a style="cursor: pointer;" href="registration.php" >here</a></span>
+		<span style="float:right">Not register ? Click <a style="cursor: pointer;" href="index.php?page=registration.php" >here</a></span>
 
       </form>
     </div> <!-- /container -->

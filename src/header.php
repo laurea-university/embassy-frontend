@@ -8,5 +8,4 @@
         <link rel="shortcut icon" href="./bootstrap-2.3.0/ico/favicon.png">
     <link href="./bootstrap-2.3.0/css/bootstrap.css" rel="stylesheet">
     <link href="./bootstrap-2.3.0/css/bootstrap-responsive.css" rel="stylesheet">
-
 </head>

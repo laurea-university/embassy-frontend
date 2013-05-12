@@ -18,6 +18,7 @@ if (isset($_SESSION[SESSION_PREFIX.'id']) && (isset($_SESSION[SESSION_PREFIX.'ad
 		</li>';
 	}
 ?>
+        <li><a href="index.php?page=add_company.php">Add a company</a></li>
         <li><a href="<?php echo getLinkPage("contact")?>">Contact us</a></li>
     </ul>
     
