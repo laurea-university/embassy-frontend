@@ -8,7 +8,6 @@
             <li><a  href="index.php">Home</a></li>
             <li><a href="<?php echo getLinkPage("login")?>">Log In</a></li>
             <li><a href="<?php echo getLinkPage("contact")?>">Contact Us</a></li>
-            <li><a href="<?php echo getLinkPage("sitemap")?>">SiteMap</a></li>
         </ul>
         <div class="privacy">
 			<br/><br/>

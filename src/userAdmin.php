@@ -12,7 +12,6 @@ hasAccess();
 
         <div class="content">
 			<div class="banner">
-					<div class="logoSlovenia"><img src="images/slovenia.png" style="padding-top : 5px" /></div>
 					<div class="logoFlag"><img src="images/banner.jpg" /></div>
 			</div>
 			<script type="text/javascript">
@@ -63,7 +62,7 @@ hasAccess();
 							$res = $db->query($sql);
 							while($row = $res->fetch())
 							  {
-								echo '<tr id='.$row['id'].'>';
+								echo '<tr id="row'.$row['id'].'">';
 								echo "<td>".$row['login']."</td>";
 								echo "<td></td>";
 								echo "<td>".$row['mail']."</td>";

@@ -12,7 +12,6 @@ hasAccess();
 
         <div class="content">
 			<div class="banner">
-					<div class="logoSlovenia"><img src="images/slovenia.png" style="padding-top : 5px" /></div>
 					<div class="logoFlag"><img src="images/banner.jpg" /></div>
 			</div>
 			<script type="text/javascript">
