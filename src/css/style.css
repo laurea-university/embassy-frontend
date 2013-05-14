@@ -37,19 +37,9 @@ body {
     margin-top : 1px
 }
 
-
-.logoSlovenia{
-    float:left;
-    width: 400px;
-    border-left : 2px solid black;
-    border-top : 2px solid black;
-    border-bottom: 2px solid black;
-    height: 64px
-}
-
 .logoFlag{
     float:left;
-    width: 595px;
+    width: 995px;
     border-top : 2px solid black;
     border-right : 2px solid black ;
     border-bottom: 2px solid black
